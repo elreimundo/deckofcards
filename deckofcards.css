@@ -1,0 +1,14 @@
+body {
+  background-color: #3453D1;
+}
+
+.card {
+  display: inline-block;
+  width: 150px;
+  height: 200px;
+  border: 1px solid white;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -o-border-radius: 5px;
+  -moz-border-radius: 5px;
+}
