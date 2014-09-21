@@ -1,7 +1,4 @@
 ;(function () {
-  var button = document.getElementsByTagName('button')[0],
-      cardSpace = document.getElementsByClassName('card')[0];
-
   // Card class
   function Card (rank, suit) {
     this.model = new Card.Model(rank, suit);
@@ -50,7 +47,7 @@
   };
 
   Deck.Model.prototype = {
-    drawCard = function () {
+    drawCard: function () {
       return this.cards.pop();
     },
 
@@ -72,9 +69,6 @@
     }
   };
 
-  var deck = new Deck();
-
-  button.addEventListener('click', function () {
-    deck.drawCard().renderTo(cardSpace);
-  });
+  // make Deck available to any page that embeds this script
+  window.Deck = Deck;
 })();
